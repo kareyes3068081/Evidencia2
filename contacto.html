@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+ <html>
+ <head>
+  <title>Contacto - Cold Palmetto</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+   body {
+        font-family: 'Roboto', sans-serif;
+    }
+   .social-icons {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .social-icons a {
+        color: white;
+        font-size: 2rem;
+        transition: color 0.3s;
+    }
+    .social-icons a:hover {
+        color: #f1f1f1;
+    }
+  </style>
+ </head>
+ <body class="bg-white text-black">
+  <!-- Header -->
+  <header class="bg-red-700 text-white">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="flex items-center">
+            <img alt="Cold Palmetto Logo" class="h-12 w-12 mr-2" height="50" src="assets/logo.png" width="50"/>
+        </div>
+        <nav>
+            <ul class="flex space-x-4">
+                <li>
+                   <a class="hover:underline" href="index.html">
+                       Inicio
+                      </a>
+                     </li>
+                     <li>
+                      <a class="hover:underline" href="nuestros valores.html">
+                       Nuestros Valores
+                      </a>
+                     </li>
+                     <li>
+                      <a class="hover:underline" href="productos.html">
+                       Productos
+                      </a>
+                     </li>
+                     <li>
+                      <a class="hover:underline" href="politica de privacidad.html">
+                       Política de Privacidad
+                      </a>
+                     </li>
+                     <li>
+                      <a class="hover:underline" href="contacto.html">
+                       Contacto
+                      </a>
+                      <li>
+               </ul>
+        </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-8">
+    <h1 class="text-3xl font-bold mb-4">Contáctanos</h1>
+    <p class="mb-4">
+        Escríbenos a nuestros correos electrónicos 
+        <a class="text-blue-500" href="mailto:coldpalmetto1@gmail.com">coldpalmetto1@gmail.com</a> o 
+        <a class="text-blue-500" href="mailto:coldpalmetto2@gmail.com">coldpalmetto2@gmail.com</a>
+        o completa el formulario a continuación y nos pondremos en contacto contigo con gusto.
+    </p>
+
+    <div class="flex">
+        <!-- Contact Form -->
+        <div class="w-1/2 pr-4">
+            <!-- Redirige al archivo agradecimiento.html -->
+            <form action="agradecimiento.html" method="POST">
+                <div class="mb-4">
+                    <label class="block" for="nombre">Nombre <span class="text-red-500">(requerido)</span></label>
+                    <div class="flex space-x-4">
+                        <input class="border border-gray-300 p-2 w-1/2" id="nombre" name="nombre" placeholder="Nombre de pila" type="text" required />
+                        <input class="border border-gray-300 p-2 w-1/2" id="apellido" name="apellido" placeholder="Apellido" type="text"/>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block" for="email">Correo electrónico <span class="text-red-500">(requerido)</span></label>
+                    <input class="border border-gray-300 p-2 w-full" id="email" name="email" type="email" required />
+                </div>
+                <div class="mb-4">
+                    <label class="block" for="sujeto">Sujeto <span class="text-red-500">(requerido)</span></label>
+                    <input class="border border-gray-300 p-2 w-full" id="sujeto" name="sujeto" type="text" required />
+                </div>
+                <div class="mb-4">
+                    <label class="block" for="mensaje">Mensaje <span class="text-red-500">(requerido)</span></label>
+                    <textarea class="border border-gray-300 p-2 w-full h-32" id="mensaje" name="mensaje" required></textarea>
+                </div>
+                <button class="border border-red-700 text-red-700 px-4 py-2" type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Location -->
+        <div class="w-1/2 pl-4">
+            <h2 class="text-xl font-bold mb-4">Nuestra ubicación</h2>
+            <p>Metepec 50255, Edomex, México</p>
+            <!-- Actualiza la ruta del mapa aquí si es local -->
+            <img alt="Mapa de ubicación" class="mt-4" height="300" src="assets/mapa.jpg" width="300"/>
+        </div>
+    </div>
+  </main>
+
+  <!-- Social Media Section -->
+  <section class="relative bg-cover bg-center h-48 flex items-center justify-center" style="background-image: url('assets/bigote.jpeg');">
+    <h2 class="text-white text-3xl font-bold">Redes sociales</h2>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-red-700 text-white py-8">
+    <div class="container mx-auto text-center">
+        <img alt="Cold Palmetto Logo" class="mx-auto mb-4" height="100" src="assets/logo.png" width="100"/>
+        <p>Metepec 50245, EdoMex, México</p>
+        <p>5513040203</p>
+        <p>coldpalmetto09@gmail.com</p>
+    </div>
+    <div class="text-center text-xs mt-4">
+        <p>Copyright © 2023, Cold Palmetto. Todos los derechos reservados. Consulta nuestras condiciones de uso y el aviso de privacidad.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+

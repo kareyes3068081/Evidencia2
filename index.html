@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<html>
+ <head>
+  <title>
+   Cold Palmetto
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+   
+   body {
+      font-family: 'Roboto', sans-serif;
+      cursor: none; /* Oculta el cursor predeterminado */
+   }
+
+   /* Estilo del cursor personalizado */
+   .cursor {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 50%;
+      pointer-events: none;
+      transition: background-color 0.3s ease;
+      animation: cursorColorChange 2s infinite alternate;
+   }
+
+   /* Animación para cambiar de color */
+   @keyframes cursorColorChange {
+      0% {
+         background-color: white;
+      }
+      50% {
+         background-color: yellow;
+      }
+      100% {
+         background-color: red;
+      }
+   }
+
+  </style>
+ </head>
+ <body class="bg-gray-900 text-white">
+  <div class="relative h-screen flex flex-col justify-center items-center">
+   <!-- Background image loaded from assets -->
+   <img alt="Background image of two people in sports attire, one holding a tennis racket" class="absolute inset-0 w-full h-full object-cover opacity-50" height="1080" src="assets/portada.jpg" width="1920"/>
+   
+   <div class="relative z-10 text-center">
+    <div class="flex flex-col items-center mb-8">
+     <!-- Logo image loaded from assets -->
+     <img alt="Logo with a tennis racket" class="mb-4" height="100" src="assets/logo.png" width="250"/>
+    </div>
+    <nav class="mb-8">
+     <ul class="flex space-x-8 text-sm uppercase tracking-widest">
+      <li>
+       <a class="hover:underline" href="index.html">
+        Inicio
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="nuestros valores.html">
+        Nuestros Valores
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="productos.html">
+        Productos
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="politica de privacidad.html">
+        Política de Privacidad
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="contacto.html">
+        Contacto
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <div class="flex justify-center space-x-4">
+     <a class="text-3xl" href="#">
+      <i class="fab fa-instagram"></i>
+     </a>
+     <a class="text-3xl" href="#">
+      <i class="fab fa-facebook"></i>
+     </a>
+     <a class="text-3xl" href="#">
+      <i class="fab fa-pinterest"></i>
+     </a>
+    </div>
+   </div>
+  </div>
+
+  <!-- Cursor personalizado -->
+  <div class="cursor"></div>
+
+  <script>
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.pageX + 'px';
+      cursor.style.top = e.pageY + 'px';
+    });
+  </script>
+ </body>
+</html>
+
+

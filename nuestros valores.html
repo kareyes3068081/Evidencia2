@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Nuestros Valores</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+   <style>
+       body {
+           font-family: 'Roboto', sans-serif;
+       }
+       /* Carousel container */
+       .carousel-container {
+           position: relative;
+           width: 100%;
+           overflow: hidden;
+           max-width: 800px;
+           margin: auto;
+       }
+       .carousel-images {
+           display: flex;
+           transition: transform 0.5s ease-in-out;
+       }
+       .carousel-images img {
+           min-width: 100%;
+           max-width: 100%;
+       }
+       /* Buttons for next and previous */
+       .carousel-btn {
+           position: absolute;
+           top: 50%;
+           transform: translateY(-50%);
+           background-color: rgba(0, 0, 0, 0.5);
+           color: white;
+           border: none;
+           padding: 10px;
+           cursor: pointer;
+       }
+       .prev {
+           left: 10px;
+       }
+       .next {
+           right: 10px;
+       }
+   </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-red-700 text-white">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center">
+                <img alt="Cold Palmetto Logo" class="h-12 w-12 mr-2" src="assets/logo.png" />
+            </div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a class="hover:underline" href="index.html">Inicio</a></li>
+                    <li><a class="hover:underline" href="nuestros valores.html">Nuestros Valores</a></li>
+                    <li><a class="hover:underline" href="productos.html">Productos</a></li>
+                    <li><a class="hover:underline" href="politica de privacidad.html">Política de Privacidad</a></li>
+                    <li><a class="hover:underline" href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="container mx-auto my-8 px-6">
+        <section class="text-center">
+            <h1 class="text-2xl italic">
+                "SQUASH: AGILIDAD, ESTRATEGIA Y
+                <span class="font-bold">PASIÓN EN CADA GOLPE."
+                </span>
+            </h1>
+            <img alt="Jugador de squash en acción" class="my-6 mx-auto" src="assets/piernasmujer.jpg" width="800"/>
+            <p class="text-gray-700 mb-4">
+                En Cold Palmetto nos especializamos en ofrecer clases de squash accesibles para adultos principiantes que desean aprender y disfrutar de este deporte. Nos dedicamos a brindar una experiencia excepcional que refleje un sentido de comunidad y profesionalismo.
+            </p>
+            <button class="bg-red-600 text-white py-2 px-4 rounded">Reserva tu clase hoy</button>
+        </section>
+        
+        <!-- Valores - Carousel -->
+        <section class="my-12 text-center">
+            <h2 class="text-2xl font-bold mb-6">Nuestros Valores</h2>
+            <p class="text-gray-700 mb-6">
+                En Cold Palmetto, creemos que el squash debe ser accesible para todos. Nos dedicamos a ofrecer clases de squash que les permitan a los adultos sin experiencia adquirir habilidades y disfrutar de este deporte. Nos enfocamos en crear un ambiente inclusivo y acogedor para que nuestros estudiantes se sientan cómodos y motivados.
+            </p>
+
+            <!-- Carousel container -->
+            <div class="carousel-container">
+                <div class="carousel-images">
+                    <img alt="Raqueta de squash en la cancha" src="assets/raquets.jpg" />
+                    <img alt="Mano sosteniendo una pelota de squash" src="assets/red.jpg" />
+                    <img alt="Raqueta y pelota de squash en la cancha" src="assets/pelots.jpg" />
+                </div>
+                <!-- Buttons for next and previous -->
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-red-700 text-white py-8">
+        <div class="container mx-auto text-center">
+            <img alt="Cold Palmetto Logo" class="mx-auto mb-4" src="assets/logo.png" width="100"/>
+            <p>Metepec 50245, EdoMex, México</p>
+            <p>5513040203</p>
+            <p>coldpalmetto09@gmail.com</p>
+        </div>
+        <div class="text-center text-xs mt-4">
+            <p>Copyright © 2023, Cold Palmetto. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-images img');
+        const totalSlides = slides.length;
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            const offset = -currentSlide * 100;
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>
